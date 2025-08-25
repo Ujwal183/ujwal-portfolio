@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N. Sai Ujwal Reddy - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .dark-mode {
+            background-color: #1f2937;
+            color: #f3f4f6;
+        }
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: scale(1.05);
+        }
+        .project-card {
+            transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .project-card.hidden {
+            display: none;
+        }
+        .theme-toggle i {
+            transition: transform 0.3s ease;
+        }
+        .theme-toggle:hover i {
+            transform: rotate(20deg);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #3b82f6;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-8 relative">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-2 animate-fade-in">N. Sai Ujwal Reddy</h1>
+            <p class="text-xl mb-4">Java Developer | Crafting Innovative Solutions</p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:ujwalreddy183@gmail.com" class="hover:text-blue-200 transition">ujwalreddy183@gmail.com</a>
+                <a href="tel:+917989297022" class="hover:text-blue-200 transition">+91-7989297022</a>
+                <a href="https://www.linkedin.com/in/ujwal-reddy-894a122a6" target="_blank" class="hover:text-blue-200 transition">LinkedIn</a>
+            </div>
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="theme-toggle absolute top-4 right-4 text-2xl">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-semibold text-center mb-12">About Me</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto animate-slide-up">
+                Motivated Java Developer with a passion for Data Structures and Algorithms. I specialize in creating efficient, innovative solutions using Java and modern web technologies, aiming to drive team success in dynamic environments.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="bg-white dark:bg-gray-800 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-semibold text-center mb-12">Projects</h2>
+            <!-- Filter Buttons -->
+            <div class="flex justify-center space-x-4 mb-8">
+                <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full text-sm font-medium" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full text-sm font-medium" data-filter="web">Web Development</button>
+            </div>
+            <!-- Project Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-container">
+                <div class="project-card web bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400">Personal Portfolio Website</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2">
+                        A fully responsive portfolio website achieving a 95% Lighthouse performance score. Features an intuitive UI with dynamic project filtering.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400 mt-2"><strong>Technologies:</strong> HTML5, CSS3, JavaScript, VS Code, Git</p>
+                    <a href="https://github.com/ujwal-reddy/portfolio" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline mt-4 inline-block">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-semibold text-center mb-12">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg animate-slide-up">
+                    <h3 class="text-lg font-bold text-blue-600 dark:text-blue-400">Programming</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Java (Advanced)</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg animate-slide-up">
+                    <h3 class="text-lg font-bold text-blue-600 dark:text-blue-400">Web Technologies</h3>
+                    <p class="text-gray-600 dark:text-gray-300">HTML5, CSS3, JavaScript (ES6), React (Basic)</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg animate-slide-up">
+                    <h3 class="text-lg font-bold text-blue-600 dark:text-blue-400">Databases & Tools</h3>
+                    <p class="text-gray-600 dark:text-gray-300">MySQL, Git, GitHub, VS Code, Linux (Basic)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title text-3xl font-semibold mb-12">Get in Touch</h2>
+            <p class="text-lg mb-6">Interested in collaborating? Let's create something amazing together!</p>
+            <a href="mailto:ujwalreddy183@gmail.com" class="px-6 py-3 bg-white text-blue-600 rounded-full font-medium hover:bg-gray-200 transition">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 N. Sai Ujwal Reddy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+
+        // Project Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.classList.contains(filter)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Set default filter to 'all'
+        document.querySelector('[data-filter="all"]').classList.add('active');
+
+        // Animation on Scroll
+        const animateElements = document.querySelectorAll('.animate-slide-up, .animate-fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.2 });
+
+        animateElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
